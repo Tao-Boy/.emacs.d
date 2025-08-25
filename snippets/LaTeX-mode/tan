@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: tan
+# key: tan
+# condition: (and (texmathp) 'auto)
+# --
+\tan $0

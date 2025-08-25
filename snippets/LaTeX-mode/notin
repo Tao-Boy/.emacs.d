@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: notin
+# key: nin
+# condition: (and (texmathp) 'auto)
+# --
+\notin

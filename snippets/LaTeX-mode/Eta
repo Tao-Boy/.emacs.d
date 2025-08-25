@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Eta
+# key: Eta
+# condition: (and (texmathp) 'auto)
+# --
+\Eta

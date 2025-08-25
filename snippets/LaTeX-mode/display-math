@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: display-math
+# key: ;;
+# condition: (and (not (texmathp)) 'auto)
+# --
+\[
+  $1
+\]

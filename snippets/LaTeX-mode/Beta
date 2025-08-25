@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Beta
+# key: ;B
+# condition: (and (texmathp) 'auto)
+# --
+\Beta

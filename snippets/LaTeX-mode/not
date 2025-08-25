@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: not
+# key: not
+# condition: (and (texmathp) 'auto)
+# --
+\not

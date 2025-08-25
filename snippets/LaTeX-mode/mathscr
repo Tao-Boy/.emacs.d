@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: mathscr
+# key: scr
+# condition: (and (texmathp) 'auto)
+# --
+\mathscr{$1}

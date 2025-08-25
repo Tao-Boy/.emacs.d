@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: set
+# key: set
+# condition: (and (texmathp) 'auto)
+# --
+\\{$1\\}

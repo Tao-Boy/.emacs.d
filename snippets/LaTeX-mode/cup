@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: cup
+# key: cup
+# condition: (and (texmathp) 'auto)
+# --
+\cup

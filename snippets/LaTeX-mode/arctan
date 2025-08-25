@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: arctan
+# key: atan
+# condition: (and (texmathp) 'auto)
+# --
+\arctan $0

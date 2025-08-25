@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Omega
+# key: ;O
+# condition: (and (texmathp) 'auto)
+# --
+\Omega

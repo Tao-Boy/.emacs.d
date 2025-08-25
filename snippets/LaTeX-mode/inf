@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: inf
+# key: inf
+# condition: (and (texmathp) 'auto)
+# --
+\inf

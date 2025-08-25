@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: arccos
+# key: acos
+# condition: (and (texmathp) 'auto)
+# --
+\arccos $0

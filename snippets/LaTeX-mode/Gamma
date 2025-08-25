@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Gamma
+# key: ;G
+# condition: (and (texmathp) 'auto)
+# --
+\Gamma

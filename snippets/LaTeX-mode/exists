@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: exists
+# key: ee
+# condition: (and (texmathp) 'auto)
+# --
+\exists

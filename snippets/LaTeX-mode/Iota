@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Iota
+# key: Iot
+# condition: (and (texmathp) 'auto)
+# --
+\Iota

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Delta
+# key: ;D
+# condition: (and (texmathp) 'auto)
+# --
+\Delta

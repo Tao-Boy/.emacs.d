@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Phi
+# key: ;P
+# condition: (and (texmathp) 'auto)
+# --
+\Phi

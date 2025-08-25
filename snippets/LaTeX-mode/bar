@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: bar
+# key: bar
+# condition: (and (texmathp) 'auto)
+# --
+\bar{$1}

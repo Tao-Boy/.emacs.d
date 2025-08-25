@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: min
+# key: min
+# condition: (and (texmathp) 'auto)
+# --
+\min

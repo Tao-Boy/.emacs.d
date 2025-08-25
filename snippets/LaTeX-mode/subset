@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: subset
+# key: sub
+# condition: (and (texmathp) 'auto)
+# --
+\subset

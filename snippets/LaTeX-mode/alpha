@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: alpha
+# key: ;a
+# condition: (and (texmathp) 'auto)
+# --
+\alpha

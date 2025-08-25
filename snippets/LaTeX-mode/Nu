@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Nu
+# key: Nu
+# condition: (and (texmathp) 'auto)
+# --
+\Nu

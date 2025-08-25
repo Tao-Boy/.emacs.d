@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: textbf
+# key: tbf
+# condition: (and (not (texmathp)) 'auto)
+# --
+\textbf{$1}

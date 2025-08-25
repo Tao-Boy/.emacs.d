@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Sigma
+# key: ;S
+# condition: (and (texmathp) 'auto)
+# --
+\Sigma

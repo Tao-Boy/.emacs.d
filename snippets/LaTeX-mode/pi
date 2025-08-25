@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: pi
+# key: pi
+# condition: (and (texmathp) 'auto)
+# --
+\pi

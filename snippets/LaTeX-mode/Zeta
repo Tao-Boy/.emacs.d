@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Zeta
+# key: ;Z
+# condition: (and (texmathp) 'auto)
+# --
+\Zeta

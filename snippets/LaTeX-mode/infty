@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: infty
+# key: oo
+# condition: (and (texmathp) 'auto)
+# --
+\infty

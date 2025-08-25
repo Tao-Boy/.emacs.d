@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Epsilon 
+# key: ;E
+# condition: (and (texmathp) 'auto)
+# --
+\Epsilon

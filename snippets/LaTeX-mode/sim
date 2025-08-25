@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: sim
+# key: ~~
+# condition: (and (texmathp) 'auto)
+# --
+\sim

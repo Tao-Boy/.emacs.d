@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Varphi
+# key: :P
+# condition: (and (texmathp) 'auto)
+# --
+\Varphi

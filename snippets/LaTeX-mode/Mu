@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Mu
+# key: Mu
+# condition: (and (texmathp) 'auto)
+# --
+\Mu

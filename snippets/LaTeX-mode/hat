@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: hat
+# key: hat
+# condition: (and (texmathp) 'auto)
+# --
+\hat{$1}

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: ln
+# key: ln
+# condition: (and (texmathp) 'auto)
+# --
+\ln $0

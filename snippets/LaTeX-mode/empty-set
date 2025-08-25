@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: empty-set
+# key: emp
+# condition: (and (texmathp) 'auto)
+# --
+\emptyset

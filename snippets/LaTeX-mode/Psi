@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Psi
+# key: Psi
+# condition: (and (texmathp) 'auto)
+# --
+\Psi

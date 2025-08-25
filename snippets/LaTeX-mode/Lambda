@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Lambda
+# key: ;L
+# condition: (and (texmathp) 'auto)
+# --
+\Lambda

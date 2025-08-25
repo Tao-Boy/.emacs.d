@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: _{}
+# key: jk
+# condition: (and (texmathp) 'auto)
+# --
+`(delete-backward-char 1)`_{$1}

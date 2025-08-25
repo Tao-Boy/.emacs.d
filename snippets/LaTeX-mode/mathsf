@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: mathsf
+# key: msf
+# condition: (and (texmathp) 'auto)
+# --
+\mathsf{$1}

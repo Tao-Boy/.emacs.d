@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: mathbb{N}
+# key: NN
+# condition: (and (texmathp) 'auto)
+# --
+\mathbb{N}

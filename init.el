@@ -8,3 +8,6 @@
 (require 'init-package)
 (require 'init-base)
 (require 'init-ui)
+(require 'init-latex)
+(require 'init-rime)
+(require 'init-yasnippet)

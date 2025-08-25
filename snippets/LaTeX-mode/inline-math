@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: inline-math
+# condition: (and (not (texmathp)) 'auto)
+# key: ,,
+# --
+\\($1\\)

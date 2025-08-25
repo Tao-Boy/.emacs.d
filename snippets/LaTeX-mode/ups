@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: ups
+# key: ups
+# condition: (and (texmathp) 'auto)
+# --
+\ups

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Tau
+# key: Tau
+# condition: (and (texmathp) 'auto)
+# --
+\Tau

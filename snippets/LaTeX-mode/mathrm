@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: mathrm
+# key: mrm
+# condition: (and (texmathp) 'auto)
+# --
+\mathrm{$1}

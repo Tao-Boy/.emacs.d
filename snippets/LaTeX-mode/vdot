@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: vdot
+# key: v.
+# condition: (and (texmathp) 'auto)
+# --
+\vdot

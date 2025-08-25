@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Kappa
+# key: ;K
+# condition: (and (texmathp) 'auto)
+# --
+\Kappa

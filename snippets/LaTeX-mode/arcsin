@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: arcsin
+# key: asin
+# condition: (and (texmathp) 'auto)
+# --
+\arcsin $0

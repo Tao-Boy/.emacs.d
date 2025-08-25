@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: varepsilon 
+# key: :e
+# condition: (and (texmathp) 'auto)
+# --
+\varepsilon

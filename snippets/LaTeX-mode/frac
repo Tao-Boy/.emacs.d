@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: frac
+# key: //
+# condition: (and (texmathp) 'auto)
+# --
+\frac{$1}{$2}
