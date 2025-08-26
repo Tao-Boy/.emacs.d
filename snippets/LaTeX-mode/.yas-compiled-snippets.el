@@ -35,7 +35,7 @@
 			"/home/tau/.emacs.d/snippets/LaTeX-mode/theta"
 			nil nil)
 		       ("tbf" "\\textbf{$1}" "textbf"
-			(and (texmathp) 'auto) nil nil
+			(and (not (texmathp)) 'auto) nil nil
 			"/home/tau/.emacs.d/snippets/LaTeX-mode/textbf"
 			nil nil)
 		       ("tan" "\\tan $0" "tan" (and (texmathp) 'auto)
@@ -287,7 +287,7 @@
 			"/home/tau/.emacs.d/snippets/LaTeX-mode/cdot"
 			nil nil)
 		       ("cases" "\\begin{cases}\n  $1\n\\end{cases}"
-			"cases" (not (texmathp)) nil nil
+			"cases" (texmathp) nil nil
 			"/home/tau/.emacs.d/snippets/LaTeX-mode/cases"
 			nil nil)
 		       ("cap" "\\cap" "cap" (and (texmathp) 'auto) nil
@@ -432,4 +432,4 @@
 			nil nil)))
 
 
-;;; Do not edit! File generated at Mon Aug 25 13:15:04 2025
+;;; Do not edit! File generated at Mon Aug 25 22:08:04 2025

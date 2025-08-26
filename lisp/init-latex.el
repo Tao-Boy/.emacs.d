@@ -4,7 +4,7 @@
   :ensure auctex
   :defer t
   :config 
-  (setq-default TeX-master nil
+  (setq-default TeX-master "../main"
 		TeX-PDF-mode t
 		TeX-engine 'xetex)
   (setq TeX-parse-self t

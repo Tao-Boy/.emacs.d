@@ -5,8 +5,8 @@
 
 (use-package ef-themes
   :ensure t
-  :config
-  (load-theme 'ef-melissa-light t))
+  :init
+  (load-theme 'ef-maris-dark t))
 
 (use-package doom-modeline
   :ensure t
