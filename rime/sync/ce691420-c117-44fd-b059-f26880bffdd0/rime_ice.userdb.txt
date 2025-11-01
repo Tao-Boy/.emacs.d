@@ -1,0 +1,213 @@
+# Rime user dictionary
+#@/db_name	rime_ice
+#@/db_type	userdb
+#@/rime_version	1.14.0
+#@/tick	365
+#@/user_id	ce691420-c117-44fd-b059-f26880bffdd0
+bao chi 	保持	c=1 d=1 t=159
+bi jiao 	比较	c=1 d=1 t=326
+bi re 	比热	c=1 d=1 t=139
+bian hua 	变化	c=2 d=1.60653 t=271
+bian shi 	便是	c=1 d=1 t=154
+bian wei 	变为	c=1 d=1 t=320
+biao da shi 	表达式	c=1 d=1 t=332
+biao shi 	表示	c=1 d=1 t=155
+bu bian 	不变	c=1 d=1 t=161
+chang 	场	c=2 d=1.956 t=361
+cheng 	称	c=1 d=1 t=98
+chong 	冲	c=1 d=1 t=218
+chu chu 	出处	c=0 d=0.1 t=208
+ci wai 	此外	c=1 d=1 t=146
+cong 	从	c=1 d=1 t=69
+da zi 	打字	c=1 d=1 t=223
+dai ru 	代入	c=1 d=1 t=333
+dang 	当	c=1 d=1 t=17
+dao 	到	c=1 d=1 t=265
+de 	的	c=25 d=9.82862 t=354
+de dao 	得到	c=3 d=1.54681 t=339
+deng shi 	灯饰	c=1 d=1 t=150
+deng shi 	等式	c=2 d=1.90032 t=172
+di yi ge 	第一个	c=1 d=1 t=285
+ding rong 	定容	c=1 d=1 t=138
+ding yi 	定义	c=2 d=1.97531 t=303
+ding zhen 	丁真	c=1 d=1 t=217
+dong liang 	动量	c=1 d=1 t=301
+dong liang 	栋梁	c=1 d=1 t=300
+dou jiang 	都将	c=1 d=1 t=53
+dui 	对	c=1 d=1 t=113
+dui bi 	对比	c=1 d=1 t=85
+dui qi 	对其	c=1 d=1 t=5
+dui yu 	对于	c=2 d=1.30422 t=357
+fa xian 	发现	c=1 d=1 t=16
+fang cheng 	方程	c=6 d=4.78334 t=348
+fei 	非	c=1 d=1 t=47
+fei 	飞	c=1 d=1 t=46
+fen 	分	c=1 d=1 t=108
+gai 	该	c=0 d=0.1 t=48
+gai bian 	改变	c=1 d=1 t=162
+gai kuang zhong 	该框中	c=1 d=1 t=49
+gai lv 	概率	c=2 d=1.57695 t=160
+gai ran 	概然	c=1 d=1 t=41
+ge 	个	c=1 d=1 t=63
+ge 	各	c=1 d=1 t=64
+gen ju 	根据	c=1 d=1 t=274
+gu 	古	c=0 d=0.1 t=208
+gu chu chu 	古出处	c=1 d=1 t=209
+guan li xue 	管理学	c=1 d=1 t=77
+guan xi 	关系	c=3 d=2.37601 t=177
+guang yi 	广义	c=2 d=1.79453 t=299
+gun huo 	滚或	c=1 d=1 t=232
+guo cheng 	过程	c=2 d=1.61878 t=262
+ha mi dun 	哈密顿	c=6 d=4.56657 t=355
+hai mu huo zi 	亥姆霍兹	c=3 d=2.60705 t=128
+han shu 	函数	c=6 d=4.57702 t=312
+hou 	后	c=1 d=1 t=130
+huo 	或	c=1 d=1 t=43
+ji bu si 	吉布斯	c=1 d=1 t=143
+ji shi 	即使	c=2 d=1.52466 t=278
+ji shi 	及时	c=1 d=1 t=148
+ji xian 	极限	c=1 d=1 t=36
+jiang 	将	c=3 d=1.51107 t=330
+jie guo 	结果	c=3 d=2.00045 t=200
+ju shuo 	据说	c=0 d=0.1 t=194
+jue ding 	决定	c=1 d=1 t=125
+kan yang 	看样	c=0 d=0.1 t=37
+kao lv 	考虑	c=1 d=1 t=73
+ke yi 	可以	c=9 d=5.09702 t=338
+kuang zhong 	框中	c=0 d=0.1 t=48
+kun huo 	困惑	c=1 d=1 t=233
+la ge lang ri 	拉格朗日	c=4 d=3.4084 t=342
+la te 	拉特	c=1 d=1 t=221
+lai yi 	赖以	c=1 d=1 t=121
+le 	了	c=2 d=1.54064 t=127
+li xue 	力学	c=1 d=1 t=185
+li yong 	利用	c=1 d=1 t=204
+liang 	两	c=2 d=1.32956 t=324
+liang 	量	c=5 d=2.67961 t=356
+ling 	令	c=1 d=1 t=32
+ling 	零	c=3 d=1.58062 t=288
+ling wai 	另外	c=1 d=1 t=142
+miao shu 	描述	c=1 d=1 t=250
+neng ji 	能及	c=1 d=1 t=163
+neng ji 	能级	c=1 d=1 t=164
+neng liang 	能量	c=1 d=1 t=169
+ni hao 	你好	c=1 d=1 t=215
+pei 	陪	c=0 d=0.1 t=194
+pei fang 	配方	c=1 d=1 t=107
+pei fen han shu 	配分函数	c=2 d=1.65705 t=196
+pei zhen fang ju shuo 	陪侦防据说	c=1 d=1 t=195
+pian dao shu 	偏导数	c=1 d=1 t=8
+ping 	平	c=0 d=0.1 t=37
+ping jun 	平均	c=1 d=1 t=168
+ping jun zhi 	平均值	c=1 d=1 t=39
+ping kan yang 	平看样	c=1 d=1 t=38
+qi 	其	c=3 d=2.15776 t=321
+qi 	气	c=1 d=1 t=22
+qi 	起	c=1 d=1 t=21
+qi ta 	其他	c=1 d=1 t=131
+qi zha 	欺诈	c=1 d=1 t=110
+qi zhong 	其中	c=3 d=2.06211 t=251
+qiu 	求	c=1 d=1 t=6
+qu xiang yu 	趋向于	c=1 d=1 t=31
+quan 	全	c=0 d=0.1 t=307
+quan wei fen 	全微分	c=2 d=1.93239 t=322
+que ding 	确定	c=3 d=2.46735 t=193
+re li xue 	热力学	c=1 d=1 t=132
+ren he 	任何	c=1 d=1 t=45
+ru he 	如何	c=5 d=4.70333 t=219
+ru xia 	如下	c=1 d=1 t=192
+san wei 	三维	c=2 d=1.956 t=359
+shang 	上	c=1 d=1 t=90
+shang 	熵	c=1 d=1 t=189
+shang shi 	上市	c=5 d=3.75263 t=292
+shang shi zi 	上市子	c=1 d=1 t=291
+shang yi zhang 	上一章	c=1 d=1 t=70
+she shi 	设施	c=1 d=1 t=228
+shi 	势	c=2 d=1.956 t=360
+shi 	时	c=1 d=1 t=18
+shi 	是	c=1 d=1 t=116
+shi chang 	势场	c=1 d=1 t=365
+shi jian 	时间	c=1 d=1 t=264
+shi sun 	石笋	c=1 d=1 t=214
+shi yong 	使用	c=4 d=3.54199 t=248
+shi zhi 	使之	c=1 d=1 t=319
+shi zi 	式子	c=5 d=3.27129 t=325
+shou 	受	c=1 d=1 t=364
+suo you 	所有	c=2 d=1.96561 t=26
+tong guo 	通过	c=1 d=1 t=175
+tong ji liang 	统计量	c=1 d=1 t=65
+tong shi 	同时	c=2 d=1.66034 t=310
+wan quan 	完全	c=1 d=1 t=54
+wei 	为	c=17 d=10.8657 t=349
+wei fen 	微分	c=0 d=0.1 t=307
+wen ti 	问题	c=1 d=1 t=226
+wo shi 	我是	c=1 d=1 t=216
+wu li 	物理	c=1 d=1 t=67
+xi tong 	系统	c=6 d=4.07724 t=267
+xi zong 	熙宗	c=1 d=1 t=57
+xi zong 	系踪	c=1 d=1 t=59
+xia 	下	c=1 d=1 t=37
+xian ran 	显然	c=1 d=1 t=117
+xiang 	项	c=2 d=1.85214 t=318
+xiang dui 	相对	c=2 d=1.92312 t=28
+xiang tong 	相同	c=1 d=1 t=55
+xiao qu 	小区	c=1 d=1 t=314
+xiao qu 	消去	c=1 d=1 t=317
+xie cheng 	写成	c=1 d=1 t=97
+ya qiang 	压强	c=1 d=1 t=180
+ye 	也	c=2 d=1.40454 t=315
+ye jiu 	也就	c=1 d=1 t=183
+ye ke yi 	也可以	c=1 d=1 t=313
+ye shi 	也是	c=1 d=1 t=230
+yi 	一	c=1 d=1 t=44
+yi ge 	一个	c=6 d=5.33094 t=240
+yi ji 	以及	c=1 d=1 t=80
+yi lai 	依赖	c=2 d=1.96561 t=122
+yi xia 	以下	c=1 d=1 t=199
+yi yi 	意义	c=2 d=1.55433 t=186
+yi zhi 	一直	c=1 d=1 t=2
+yi zhi 	已知	c=2 d=1.38481 t=194
+yin ci 	因此	c=2 d=1.49659 t=281
+yin ru 	引入	c=1 d=1 t=178
+yong liang 	用量	c=0 d=0.1 t=275
+you 	有	c=3 d=1.5067 t=329
+you 	由	c=3 d=1.86469 t=328
+you bian 	右边	c=1 d=1 t=153
+you le 	有了	c=1 d=1 t=184
+you qie jin you 	有且仅有	c=1 d=1 t=289
+you qu 	有趣	c=1 d=1 t=207
+you yu 	由于	c=1 d=1 t=280
+yu 	与	c=1 d=1 t=84
+yu bei zhi shi 	预备知识	c=1 d=1 t=234
+yu chun 	愚蠢	c=1 d=1 t=340
+yu shi 	于是	c=3 d=1.92359 t=341
+yuan li 	原理	c=1 d=1 t=277
+yun dong 	运动	c=7 d=5.2078 t=343
+zai 	在	c=3 d=1.56578 t=358
+zhang luo 	涨落	c=2 d=1.92312 t=29
+zhe ge 	这个	c=4 d=3.12754 t=181
+zhe jiu you 	这就有	c=1 d=1 t=198
+zhe shi 	这是	c=1 d=1 t=1
+zhe shi ge 	这是个	c=1 d=1 t=224
+zhen fang 	侦防	c=0 d=0.1 t=194
+zheng ge 	整个	c=1 d=1 t=260
+zheng ze 	正则	c=4 d=2.31409 t=347
+zhi 	值	c=3 d=2.76181 t=52
+zhi dan 	制单	c=1 d=1 t=242
+zhi dian 	指点	c=1 d=1 t=241
+zhi dian 	质点	c=1 d=1 t=243
+zhi shou 	只收	c=1 d=1 t=363
+zhong 	中	c=9 d=5.17756 t=362
+zhu yi dao 	注意到	c=1 d=1 t=147
+zhuang tai 	状态	c=2 d=1.89137 t=269
+zi 	子	c=0 d=0.1 t=290
+zi you neng 	自由能	c=4 d=3.41867 t=144
+zong he 	综合	c=1 d=1 t=61
+zui 	最	c=1 d=1 t=40
+zui xiao 	最小	c=1 d=1 t=275
+zuo 	做	c=0 d=0.1 t=275
+zuo bian 	左边	c=1 d=1 t=174
+zuo biao 	坐标	c=1 d=1 t=254
+zuo chu 	做出	c=1 d=1 t=205
+zuo he 	作何	c=1 d=1 t=60
+zuo yong liang 	做用量	c=1 d=1 t=276
