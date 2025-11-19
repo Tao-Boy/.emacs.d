@@ -4,6 +4,8 @@
 
 (use-package rime
   :straight t
+  :custom
+  (default-input-method "rime")  
   :config
   (if (eq system-type 'darwin)
       (setq rime-librime-root "/opt/homebrew"

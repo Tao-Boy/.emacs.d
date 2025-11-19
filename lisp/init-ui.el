@@ -4,6 +4,7 @@
 
 (set-face-attribute 'default nil
 		    :family "JetBrains Mono"
+		    :background "unspecified"
 		    :height 150)
 
 (set-fontset-font t 'chinese-gbk
@@ -73,6 +74,10 @@
   (set-face-attribute 'rainbow-delimiters-depth-8-face nil :foreground "#d63384")   ; 洋红色 (Magenta)
   (set-face-attribute 'rainbow-delimiters-depth-9-face nil :foreground "#a6e22e")   ; 酸橙绿 (Lime Green)
   )
+
+(use-package elisp-demos
+  :init
+  (advice-add 'describe-function-1 :after #'elisp-demos-advice-describe-function-1))
 
 (provide 'init-ui)
 ;; init-ui.el ends here

@@ -21,7 +21,7 @@
 	corfu-quit-no-match 'separator
      	)
   (add-to-list 'corfu-margin-formatters #'nerd-icons-corfu-formatter)
-  :hook (prog-mode . corfu-mode))
+  :hook ((prog-mode org-mode) . corfu-mode))
 
 
 (use-package vertico
