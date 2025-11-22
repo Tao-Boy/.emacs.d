@@ -3,13 +3,12 @@
 ;; Code:
 
 (set-face-attribute 'default nil
-		    :family "JetBrains Mono"
-		    :background "unspecified"
-		    :height 150)
+		    :family "Sarasa Mono SC"
+		    :height 180)
 
-(set-fontset-font t 'chinese-gbk
-                  (font-spec :family "LXGW WenKai Mono"
-                             :size 15.0))
+;; (set-fontset-font t 'chinese-gbk
+;;                   (font-spec :family "LXGW WenKai Mono"
+;;                              :size 15.0))
 
 (setq idle-update-delay 1.0)
 (setq fast-but-imprecise-scrolling t)
@@ -42,7 +41,7 @@
   (doom-themes-enable-bold t)
   (doom-themes-enable-italic t)
   :init
-  (load-theme 'doom-gruvbox t)
+  (load-theme 'doom-one t)
   )
 
 (use-package doom-modeline
@@ -60,9 +59,8 @@
   (dashboard-set-file-icons t))
 
 (use-package rainbow-delimiters
-  :straight t
   :hook
-  ((prog-mode LaTeX-mode) . rainbow-delimiters-mode)
+  ((prog-mode LaTeX-mode typst-ts-mode) . rainbow-delimiters-mode)
   :config
   (set-face-attribute 'rainbow-delimiters-depth-1-face nil :foreground "#007bff")   ; 亮蓝色 (Bright Blue)
   (set-face-attribute 'rainbow-delimiters-depth-2-face nil :foreground "#ffc107")   ; 琥珀黄 (Amber Yellow)

@@ -2,6 +2,8 @@
 
 ;;; Code:
 (setq package-enable-at-startup nil)
+(setenv "LSP_USE_PLISTS" "true")
+
 
 ;; speed up the startup
 (setq gc-cons-percentage 0.6

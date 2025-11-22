@@ -1,6 +1,8 @@
 ;; -*- lexical-binding: t; -*-
 
-(use-package typst-ts-mode)
+(use-package typst-ts-mode
+  :config
+  (setq typst-ts-indent-offset 2))
 
 (use-package typst-preview
   :straight '(typst-preview :type git :host github :repo "havarddj/typst-preview.el")

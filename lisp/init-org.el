@@ -1,5 +1,25 @@
 ;; -*- lexical-binding: t; -*-
 
+
+(use-package ox-typst
+  :defer nil
+  :after org)
+;; 定义一个适配 org-publish 的专用函数
+(defun my-hugo-publish-to-md (plist filename pub-dir)
+  "Org-publish 的包装函数，忽略多余参数，直接调用 ox-hugo 导出"
+  (with-current-buffer (find-file-noselect filename)
+    (org-hugo-export-to-md)))
+
+(setq org-publish-project-alist
+      '(("quartz"
+	 :base-directory "~/org-roam/"
+	 :publishing-directory "~/Blog/quartz/"
+	 :base-extension "org"
+	 :recursive t
+	 :publishing-function my-hugo-publish-to-md
+	 )))
+
+(use-package ox-hugo)
 (use-package org
   :config
   (setq org-highlight-latex-and-related '(latex native entities)))
@@ -10,7 +30,9 @@
    (latex . t)))
 
 (use-package org-roam
-  :straight t
+  :straight (:host github :repo "org-roam/org-roam"
+		   :files (:defaults "extensions/*")
+		   :build (:not compile))
   :custom
   (org-roam-directory (expand-file-name "~/org-roam"))
   :bind (("C-c n l" . org-roam-buffer-toggle)
@@ -21,13 +43,7 @@
          ;; Dailies
          ("C-c n j" . org-roam-dailies-capture-today))
   :config
-  (org-roam-db-autosync-mode)
-  )
-
-(use-package simple-httpd
-  :straight '(simple-httpd :type git :host github :repo "skeeto/emacs-web-server"))
-
-(use-package impatient-mode)
+  (org-roam-db-autosync-mode))
 
 (use-package org-roam-ui
   :after org-roam

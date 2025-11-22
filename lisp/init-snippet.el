@@ -3,20 +3,23 @@
 ;; Code:
 
 (use-package yasnippet
-  :straight t
-  :init
-  (yas-global-mode)
+  :hook
+  ((typst-ts-mode). yas-minor-mode)
   :config
+  (define-key yas-keymap (kbd "TAB") nil)
+  (define-key yas-keymap (kbd "<tab>") nil)
+  (define-key yas-keymap (kbd "C-j") #'yas-next-field)
+  (define-key yas-keymap (kbd "C-k") #'yas-prev-field)
   (set-face-attribute 'yas-field-highlight-face nil
-		      :background "unspecified")
-  (setq yas-cursor-field-highlight nil))
+		      :background 'unspecified
+		      :inherit 'unspecified))
 
 (defvar my-snippets 
       (list
        'laas-mode
        :cond  (lambda () (not (texmathp)))
        ";;" (lambda () (interactive)
-	      (yas-expand-snippet  "\\begin{equation*}\n  $1\n\\end{equation*}\n$0"))
+	      (yas-expand-snippet  "\\[\n  $1\n\\]\n$0"))
        ",," (lambda () (interactive)
 	      (yas-expand-snippet "\\\\($1\\\\) $0"))
        "tbf" (lambda () (interactive)
@@ -165,7 +168,7 @@
        "<<" "\\ll"
        "to" "\\to"
        "inv" "^{-1}"
-       "**" "^*"
+       "**" "^{*}"
        "+-" "\\pm"
        "-+" "\\mp"
        "cap" "\\cap"
@@ -196,17 +199,134 @@
 				   "\\mel{$1}{$2}{$3}$0"))))
        ))
 
-(use-package laas
-  :straight t
-  :hook ((LaTeX-mode org-mode) . laas-mode)
-  :init
-  (setq laas-enable-auto-space nil)
-  (setq laas-basic-snippets nil
-        laas-latex-accent-cond nil
-        laas-subscript-snippets nil)
+;; (use-package laas
+;;   :straight t
+;;   :hook ((LaTeX-mode org-mode markdown-mode) . laas-mode)
+;;   :init
+;;   (setq laas-enable-auto-space nil)
+;;   (setq laas-basic-snippets nil
+;;         laas-latex-accent-cond nil
+;;         laas-subscript-snippets nil)
+;;   :config
+;;   (apply 'aas-set-snippets my-snippets)
+;;   )
+
+(defun my-smart-digit-condition ()
+  "判断数字键触发时的上下文状态，返回状态符号给 Action 使用。"
+  (interactive)
+  (when (typst-mathzone-p)
+    (cond
+     ((looking-back "_([0-9]+" (line-beginning-position))
+      'extend-brace-sub)
+     
+     ((looking-back "_[0-9]" (- (point) 2))
+      'extend-simple-sub)
+     
+     ((looking-back "[a-zA-Z]" (- (point) 1))
+      'new-sub)
+     (t nil))))
+
+(defun my-insert-smart-digit (key)
+  "根据 Condition 返回的状态，执行具体的下标变换逻辑。
+KEY 是当前按下的数字键字符串。"
+  (interactive)
+  (pcase aas-transient-snippet-condition-result
+    ;; 对应情况 C: 删除末尾的 '}'，追加数字，再补回 '}'
+    ('extend-brace-sub
+     (delete-char -1)
+     (insert key ")"))
+    
+    ('extend-simple-sub
+     (let ((prev-digit (char-to-string (char-before))))
+       (delete-char -1)       ;; 删除原先的数字
+       (insert "(" prev-digit key ")"))) ;; 插入 {旧数字+新数字}
+
+    ('new-sub
+     (insert "_" key))
+    (_ (insert key))))
+
+
+(use-package aas
+  :hook (typst-ts-mode . aas-activate-for-major-mode)
   :config
-  (apply 'aas-set-snippets my-snippets)
-  )
+  (aas-set-snippets 'typst-ts-mode
+                    :cond #'not-typst-mathzone-p
+                    ",," '(yas "$$1$$0")
+		    ";;" '(yas "$\n  $1\n$")
+		    :cond #'typst-mathzone-p
+		    ";a" "alpha"
+		    ";A" "Alpha"
+		    ";b" "beta"
+		    ";B" "Beta"
+		    ";t" "theta"
+		    ";g" "gamma"
+		    ";G" "Gamma"
+		    ";d" "delta"
+		    ";D" "Delta"
+		    ";e" "epsilon"
+		    ":e" "epsilon.alt"
+		    ";E" "Epsilon"
+		    ";z" "zeta"
+		    ";Z" "Zeta"
+		    ";k" "kappa"
+		    ";K" "Kappa"
+		    ";l" "lambda"
+		    ";L" "Lambda"
+		    ";r" "rho"
+		    ";R" "Rho"
+		    ";n" "nabla"
+		    ";s" "sigma"
+		    ";S" "Sigma"
+		    ";o" "omega"
+		    ";O" "Omega"
+		    "..." "dots"
+		    "c." "dot"
+		    "v." "dot.v"
+		    "nin" "in.not"
+		    "aa" "forall"
+		    "ee" "exists"
+		    "to" "->"
+		    "jk" '(yas "_($1)$0")
+		    "kj" '(yas "^($1)$0")
+		    "sr" "^2"
+		    "cb" "^3"
+		    "inv" "^(-1)"
+		    "**" "^*"
+		    "+-" "plus.minus"
+		    "-+" "minus.plus"
+		    "cap" "inter"
+		    "cup" "union"
+		    "sub" "subset"
+		    "oo" "infinity"
+		    "dag" "^dagger"
+		    "xx" "times"
+		    "cir" "circle"
+		    "eqv" "equiv"
+		    "ox" "times.circle"
+		    "o+" "plus.circle"
+		    "emp" "emptyset"
+		    "dd" "dif"
+		    "dot" '(yas "dot($1)$0")
+		    "doo" '(yas "dot.double($1)$0")
+		    "hat" '(yas "hat($1)$0")
+		    "sq" '(yas "sqrt($1)$0")
+		    "sum" '(yas "sum_($1)$0")
+		    "int" '(yas "integral_($1)$2 dif $0")
+		    "iint" '(yas "integral.double_($1)$2 dif $0")
+		    "lint" '(yas "integral_(-oo)^(+oo) $1 dif $0")
+		    "//" '(yas "($1)/($2)$0")
+		    :cond #'my-smart-digit-condition
+		    "0" (lambda () (interactive) (my-insert-smart-digit "0"))
+		    "1" (lambda () (interactive) (my-insert-smart-digit "1"))
+		    "2" (lambda () (interactive) (my-insert-smart-digit "2"))
+		    "3" (lambda () (interactive) (my-insert-smart-digit "3"))
+		    "4" (lambda () (interactive) (my-insert-smart-digit "4"))
+		    "5" (lambda () (interactive) (my-insert-smart-digit "5"))
+		    "6" (lambda () (interactive) (my-insert-smart-digit "6"))
+		    "7" (lambda () (interactive) (my-insert-smart-digit "7"))
+		    "8" (lambda () (interactive) (my-insert-smart-digit "8"))
+		    "9" (lambda () (interactive) (my-insert-smart-digit "9"))
+		    ))
 
 (provide 'init-snippet)
 ;; init-snippet.el ends here

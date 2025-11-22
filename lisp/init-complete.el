@@ -13,7 +13,6 @@
 
 
 (use-package corfu
-  :straight t
   :config
   (setq corfu-auto t
 	corfu-auto-delay 0
@@ -21,7 +20,10 @@
 	corfu-quit-no-match 'separator
      	)
   (add-to-list 'corfu-margin-formatters #'nerd-icons-corfu-formatter)
-  :hook ((prog-mode org-mode) . corfu-mode))
+  (define-key corfu-map (kbd "TAB") nil)
+  (define-key corfu-map (kbd "<tab>") nil)
+  (define-key corfu-map (kbd "RET") 'corfu-insert)
+  :hook ((prog-mode org-mode typst-ts-mode) . corfu-mode))
 
 
 (use-package vertico
