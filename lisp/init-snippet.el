@@ -6,10 +6,6 @@
   :hook
   ((typst-ts-mode). yas-minor-mode)
   :config
-  (define-key yas-keymap (kbd "TAB") nil)
-  (define-key yas-keymap (kbd "<tab>") nil)
-  (define-key yas-keymap (kbd "C-j") #'yas-next-field)
-  (define-key yas-keymap (kbd "C-k") #'yas-prev-field)
   (set-face-attribute 'yas-field-highlight-face nil
 		      :background 'unspecified
 		      :inherit 'unspecified))
@@ -306,6 +302,9 @@ KEY 是当前按下的数字键字符串。"
 		    "o+" "plus.circle"
 		    "emp" "emptyset"
 		    "dd" "dif"
+		    "ket" '(yas "ket($1)$0")
+		    "bra" '(yas "bra($1)$0")
+		    "brk" '(yas "braket($1)$0")
 		    "dot" '(yas "dot($1)$0")
 		    "doo" '(yas "dot.double($1)$0")
 		    "hat" '(yas "hat($1)$0")

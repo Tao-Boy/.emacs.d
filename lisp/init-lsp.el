@@ -35,10 +35,13 @@
 
 (use-package lsp-mode
   :hook ((typst-ts-mode) . lsp)
+  :hook
+  (lsp-completion-mode . (lambda ()
+			   (setq-local completion-category-defaults nil)))
   :config
   (setq lsp-log-io nil
-	lsp-lens-enable nil)
-  (setq lsp-idle-delay 2)
+	lsp-lens-enable nil
+	lsp-completion-provider :capf)
   (with-eval-after-load 'lsp-mode
   (lsp-register-client
    (make-lsp-client
@@ -48,8 +51,6 @@
     :priority 1
     :initialization-options
     '(:exportPdf "never"
-		 :formatterMode "typstyle"  ;; 推荐：使用 typstyle 进行格式化
-		 :outputPath "$root/target/$dir/$name" ;; 可选：指定输出路径格式
-		 )))))
+		 :formatterMode "typstyle")))))
 
 (provide 'init-lsp)

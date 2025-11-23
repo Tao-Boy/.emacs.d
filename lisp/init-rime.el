@@ -3,14 +3,16 @@
 ;; Code:
 
 (defun typst-mathzone-p ()
-  "检测当前是否在 Typst 数学环境内"
   (interactive)
   (let ((node (treesit-node-at (point))))
     (if (treesit-parent-until
          node
          (lambda (n)
-           (member (treesit-node-type n) '("math"))))
-        t
+	   (and
+            (equal (treesit-node-type n) "math")	                    (> (point) (treesit-node-start n))
+            (< (point) (treesit-node-end n))
+	    )))
+	t
       nil)))
 
 (defun not-typst-mathzone-p ()
@@ -24,7 +26,14 @@
   :config
   (if (eq system-type 'darwin)
       (setq rime-librime-root "/opt/homebrew"
-	    rime-share-data-dir "~/.config/rime"))
+	    rime-share-data-dir "~/.config/rime-ice"))
+  (if (eq system-type 'windows-nt)
+	  (setq rime-librime-root (file-truename "~/librime")
+		rime-share-data-dir (file-truename "~/rime-ice")))
+  (unless (not (display-graphic-p))
+    (setq rime-show-candidate 'posframe
+	  rime-posframe-style 'vertical
+	  ))
   (setq rime-disable-predicates
 	'(
 	  typst-mathzone-p

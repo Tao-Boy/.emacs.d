@@ -3,12 +3,12 @@
 ;; Code:
 
 (set-face-attribute 'default nil
-		    :family "Sarasa Mono SC"
-		    :height 180)
+ 		    :family "Sarasa Term SC"
+ 		    :height 180)
 
-;; (set-fontset-font t 'chinese-gbk
-;;                   (font-spec :family "LXGW WenKai Mono"
-;;                              :size 15.0))
+(set-fontset-font t 'chinese-gbk
+                  (font-spec :family "LXGW WenKai Mono"
+                             :size 18.0))
 
 (setq idle-update-delay 1.0)
 (setq fast-but-imprecise-scrolling t)
