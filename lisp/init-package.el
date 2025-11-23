@@ -5,6 +5,7 @@
 (setq straight-vc-git-default-clone-depth 1)
 (setq straight-use-package-by-default t)
 (setq use-package-always-defer t)
+(setq use-package-compute-statistics t)
 
 (defvar bootstrap-version)
 (let ((bootstrap-file

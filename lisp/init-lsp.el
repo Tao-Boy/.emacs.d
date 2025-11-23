@@ -39,8 +39,10 @@
   (lsp-completion-mode . (lambda ()
 			   (setq-local completion-category-defaults nil)))
   :config
+  (add-to-list 'tramp-remote-path 'tramp-own-remote-path)
   (setq lsp-log-io nil
 	lsp-lens-enable nil
+	lsp-eldoc-enable-hover nil
 	lsp-completion-provider :capf)
   (with-eval-after-load 'lsp-mode
   (lsp-register-client

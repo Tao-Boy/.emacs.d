@@ -1,9 +1,6 @@
 ;; -*- lexical-binding: t; -*-
 
 
-(use-package ox-typst
-  :defer nil
-  :after org)
 ;; 定义一个适配 org-publish 的专用函数
 (defun my-hugo-publish-to-md (plist filename pub-dir)
   "Org-publish 的包装函数，忽略多余参数，直接调用 ox-hugo 导出"

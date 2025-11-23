@@ -2,9 +2,19 @@
 
 ;; Code:
 
+(setq emoji-font (cond
+                     ((eq system-type 'darwin) "Apple Color Emoji")
+                     ((eq system-type 'windows-nt) "Segoe UI Emoji")
+                     (t "Noto Color Emoji")))
+
+(setq use-default-font-for-symbols nil)
 (set-face-attribute 'default nil
  		    :family "Sarasa Term SC"
  		    :height 180)
+
+(set-fontset-font t 'emoji
+		  (font-spec :family emoji-font
+			     :size 18.0))
 
 (set-fontset-font t 'chinese-gbk
                   (font-spec :family "LXGW WenKai Mono"

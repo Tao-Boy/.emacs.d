@@ -15,6 +15,9 @@
 (set-selection-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (setq locale-coding-system 'utf-8)
+(setq jit-lock-defer-time 0)
+(setq font-lock-multiline t)
+(setq jit-lock-chunk-size 4000)
 
 ;; dont't auto save and make backup file
 (setq make-backup-files nil
