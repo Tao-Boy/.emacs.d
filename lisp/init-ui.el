@@ -7,7 +7,6 @@
                      ((eq system-type 'windows-nt) "Segoe UI Emoji")
                      (t "Noto Color Emoji")))
 
-(setq use-default-font-for-symbols nil)
 (set-face-attribute 'default nil
  		    :family "Sarasa Term SC"
  		    :height 180)
@@ -38,6 +37,8 @@
       ;; mouse
       mouse-wheel-scroll-amount-horizontal 1
       mouse-wheel-progressive-speed nil)
+
+(global-visual-line-mode t)
 
 (use-package nerd-icons
   :straight t

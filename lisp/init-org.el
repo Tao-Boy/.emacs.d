@@ -32,6 +32,16 @@
 		   :build (:not compile))
   :custom
   (org-roam-directory (expand-file-name "~/org-roam"))
+  (org-roam-capture-templates
+   '(("d" "default" plain "%?"
+      :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
+                         ":PROPERTIES:
+:ID:       %(org-id-new)
+:END:
+#+title: ${title}
+#+SETUPFILE: ./latex-macros.setup
+")
+      :unnarrowed t)))
   :bind (("C-c n l" . org-roam-buffer-toggle)
          ("C-c n f" . org-roam-node-find)
          ("C-c n g" . org-roam-graph)
@@ -50,6 +60,16 @@
 	  ("\\braket" . "\\left\\langle #1 \\middle| #2 \\right\\rangle")
 	  ("\\dif" .  "\\,\\mathrm{d}")
 	  ("\\eval" . "\\left.#1 \\right|")
-	  ("\\Tr" . "\\text{Tr}"))))
+	  ("\\Tr" . "\\mathrm{Tr}"))))
 
+(use-package maple-preview
+  :straight '(maple-preview :type git :host github :repo "honmaple/emacs-maple-preview" :files ("*.el" "index.html" "static"))
+  :commands (maple-preview-mode)
+  :config
+  (setq maple-preview:text-content '((t . maple-preview:markdown-content)))
+  (setq maple-preview:browser-open nil
+	maple-preview:delay 0.1
+	maple-preview:auto-update t
+	maple-preview:port 8080))
+  
 (provide 'init-org)

@@ -16,27 +16,32 @@
       nil)))
 
 (defun not-typst-mathzone-p ()
-  (interactive)
-  (not (typst-mathzone-p)))
+ (interactive)
+ (not (typst-mathzone-p)))
 
 (use-package rime
-  :straight t
   :custom
   (default-input-method "rime")
   :config
-  (if (eq system-type 'darwin)
-      (setq rime-librime-root "/opt/homebrew"
-	    rime-share-data-dir "~/.config/rime-ice"))
-  (if (eq system-type 'windows-nt)
-	  (setq rime-librime-root (file-truename "~/librime")
-		rime-share-data-dir (file-truename "~/rime-ice")))
-  (unless (not (display-graphic-p))
+  (cond
+   ((eq system-type 'gnu/linux)
+    (setq rime-share-data-dir "~/.local/share/rime"))
+   
+   ((eq system-type 'darwin)
+    (setq rime-librime-root "/opt/homebrew"
+          rime-share-data-dir "~/.config/rime"))
+   
+   ((eq system-type 'windows-nt)
+    (setq rime-librime-root (file-truename "~/librime")
+          rime-share-data-dir (file-truename "~/rime"))))
+  
+  (when (display-graphic-p)
     (setq rime-show-candidate 'posframe
-	  rime-posframe-style 'vertical
-	  ))
+          rime-posframe-style 'vertical))
+  
   (setq rime-disable-predicates
 	'(
-	  typst-mathzone-p
+	  texmathp
 	  rime-predicate-space-after-cc-p
 	  rime-predicate-after-ascii-char-p
 	  rime-predicate-punctuation-line-begin-p)))
