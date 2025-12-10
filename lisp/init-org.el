@@ -48,28 +48,26 @@
          ("C-c n i" . org-roam-node-insert)
          ("C-c n c" . org-roam-capture)
          ;; Dailies
-         ("C-c n j" . org-roam-dailies-capture-today))
-  :config
-  (org-roam-db-autosync-mode))
+         ("C-c n j" . org-roam-dailies-capture-today)))
 
-(use-package org-roam-ui
-  :after org-roam
-  :config
-  (setq org-roam-ui-latex-macros
-	'(("\\mel" .  "\\left\\langle #1 \\middle| #2 \\middle| #3 \\right\\rangle")
-	  ("\\braket" . "\\left\\langle #1 \\middle| #2 \\right\\rangle")
-	  ("\\dif" .  "\\,\\mathrm{d}")
-	  ("\\eval" . "\\left.#1 \\right|")
-	  ("\\Tr" . "\\mathrm{Tr}"))))
+;; (use-package org-roam-ui
+;;   :after org-roam
+;;   :config
+;;   (setq org-roam-ui-latex-macros
+;; 	'(("\\mel" .  "\\left\\langle #1 \\middle| #2 \\middle| #3 \\right\\rangle")
+;; 	  ("\\braket" . "\\left\\langle #1 \\middle| #2 \\right\\rangle")
+;; 	  ("\\dif" .  "\\,\\mathrm{d}")
+;; 	  ("\\eval" . "\\left.#1 \\right|")
+;; 	  ("\\Tr" . "\\mathrm{Tr}"))))
 
-(use-package maple-preview
-  :straight '(maple-preview :type git :host github :repo "honmaple/emacs-maple-preview" :files ("*.el" "index.html" "static"))
-  :commands (maple-preview-mode)
-  :config
-  (setq maple-preview:text-content '((t . maple-preview:markdown-content)))
-  (setq maple-preview:browser-open nil
-	maple-preview:delay 0.1
-	maple-preview:auto-update t
-	maple-preview:port 8080))
+;; (use-package maple-preview
+;;   :straight '(maple-preview :type git :host github :repo "honmaple/emacs-maple-preview" :files ("*.el" "index.html" "static"))
+;;   :commands (maple-preview-mode)
+;;   :config
+;;   (setq maple-preview:text-content '((t . maple-preview:markdown-content)))
+;;   (setq maple-preview:browser-open nil
+;; 	maple-preview:delay 0.1
+;; 	maple-preview:auto-update t
+;; 	maple-preview:port 8080))
   
 (provide 'init-org)

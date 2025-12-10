@@ -11,6 +11,9 @@
   (set-face-attribute 'typst-ts-math-indicator-face nil
 		      :foreground "#5B6268"
 		      :inherit nil)
+  (add-hook 'typst-ts-mode-hook 
+            (lambda ()
+              (modify-syntax-entry ?$ "$")))
   (setq typst-ts-indent-offset 2))
 
 (use-package typst-preview

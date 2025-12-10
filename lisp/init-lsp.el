@@ -2,7 +2,6 @@
 
 ;; Code:
 
-
 (use-package lsp-mode
   :hook ((typst-ts-mode) . lsp)
   :hook
@@ -23,5 +22,11 @@
       :initialization-options
       '(:exportPdf "never"
 		   :formatterMode "typstyle")))))
+
+(use-package lsp-pyright
+  :custom (lsp-pyright-langserver-command "pyright") ;; or basedpyright
+  :hook (python-ts-mode . (lambda ()
+                          (require 'lsp-pyright)
+                          (lsp))))  ; or lsp-deferred
 
 (provide 'init-lsp)
