@@ -32,6 +32,7 @@
 		   :build (:not compile))
   :custom
   (org-roam-directory (expand-file-name "~/org-roam"))
+  (org-roam-db-location (concat org-roam-directory "org-roam.db"))
   (org-roam-capture-templates
    '(("d" "default" plain "%?"
       :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
