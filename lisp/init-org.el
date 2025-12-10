@@ -10,7 +10,7 @@
 (setq org-publish-project-alist
       '(("quartz"
 	 :base-directory "~/org-roam/"
-	 :publishing-directory "~/Blog/quartz/"
+	 :publishing-directory "~/org-roam-publish"
 	 :base-extension "org"
 	 :recursive t
 	 :publishing-function my-hugo-publish-to-md

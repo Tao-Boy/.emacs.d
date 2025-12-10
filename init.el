@@ -11,6 +11,9 @@
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
+(if (eq system-type 'darwin)
+    (add-to-list 'exec-path "/Library"))
+
 (setq custom-file "~/.emacs.d/custom.el")
 (with-eval-after-load 'init
   (load custom-file))

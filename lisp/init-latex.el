@@ -25,7 +25,7 @@
                 "
 \\usepackage{amsmath,amssymb,physics,bm}
 \\newcommand{\\dif}{\\mathrm{d}}
-")
+"))
   (setq xenops-math-image-scale-factor 1.5))
 
 
