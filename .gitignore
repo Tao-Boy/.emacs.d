@@ -1,0 +1,11 @@
+auto-save-list/
+.cache/
+eln-cache/
+rime/
+straight/
+eshell/
+tree-sitter/
+xenops/
+recentf.eld
+org-roam.db
+tramp
