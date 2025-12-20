@@ -20,7 +20,11 @@
 
 (use-package xenops
   :config
-  (setq xenops-math-image-scale-factor 1.3))
+  (if (eq system-type 'darwin)
+      (setq xenops-math-image-scale-factor 1.3)
+    )
+  (setq xenops-math-image-scale-factor 1.0)
+  )
 
 (provide 'init-latex)
 ;; init-latex.el ends here

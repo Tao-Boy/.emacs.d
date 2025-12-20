@@ -32,8 +32,8 @@
           rime-share-data-dir "~/.config/rime"))
    
    ((eq system-type 'windows-nt)
-    (setq rime-librime-root (file-truename "~/librime")
-          rime-share-data-dir (file-truename "~/rime"))))
+    (setq rime-librime-root "~/librime"
+	  rime-share-data-dir (file-truename "~/rime-ice"))))
   
   (when (display-graphic-p)
     (setq rime-show-candidate 'posframe
